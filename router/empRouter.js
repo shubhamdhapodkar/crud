@@ -1,5 +1,5 @@
 const express=require("express");
-const { createEmp, getalluser, getsingleuser, updateuser, deleteuser } = require("../controller/empCtrl");
+const { createEmp, getalluser, getsingleuser, updateuser, deleteuser, LoginUserCtrl } = require("../controller/empCtrl");
 
 const router=express.Router();
 
@@ -8,6 +8,7 @@ router.get("/all",getalluser);
 router.get("/:id",getsingleuser);
 router.put("/:id",updateuser);
 router.delete("/:id",deleteuser);
+router.post("/login",LoginUserCtrl)
 
 
 
